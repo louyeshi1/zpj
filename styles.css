@@ -146,8 +146,16 @@ a {
   display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
   border-radius: 4px;
   background: #ffffff;
+}
+
+.page-card-pending img {
+  background:
+    linear-gradient(90deg, rgba(237, 243, 250, 0.55), rgba(255, 255, 255, 0.95), rgba(237, 243, 250, 0.55)),
+    #ffffff;
 }
 
 .page-card figcaption {
