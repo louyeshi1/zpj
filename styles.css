@@ -128,6 +128,35 @@ a {
   border: 0;
 }
 
+.page-viewer {
+  display: grid;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.page-card {
+  margin: 0;
+  padding: 10px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.page-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  background: #ffffff;
+}
+
+.page-card figcaption {
+  padding-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  text-align: center;
+}
+
 .notice {
   margin-top: 18px;
   padding: 16px 18px;
@@ -150,5 +179,13 @@ a {
   .viewer object {
     height: 72vh;
     min-height: 520px;
+  }
+
+  .page-viewer {
+    gap: 12px;
+  }
+
+  .page-card {
+    padding: 6px;
   }
 }
