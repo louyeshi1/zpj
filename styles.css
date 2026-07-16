@@ -57,6 +57,12 @@ a {
   font-size: 14px;
 }
 
+.brand .view-note {
+  color: #2d4f87;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
 .actions {
   display: flex;
   flex-wrap: wrap;
