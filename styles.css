@@ -1,0 +1,154 @@
+:root {
+  color-scheme: light;
+  --ink: #172033;
+  --muted: #5e6a7d;
+  --line: #d8e2ef;
+  --panel: #f5f8fc;
+  --accent: #5e86c4;
+  --accent-dark: #2d4f87;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif;
+  color: var(--ink);
+  background: #edf3fa;
+}
+
+a {
+  color: inherit;
+}
+
+.shell {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px 22px 36px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 18px 22px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.brand {
+  display: grid;
+  gap: 4px;
+}
+
+.brand strong {
+  font-size: 22px;
+  letter-spacing: 0;
+}
+
+.brand span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 0 15px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  color: var(--accent-dark);
+  background: var(--white);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.button.primary {
+  color: var(--white);
+  background: var(--accent);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.card {
+  display: grid;
+  gap: 14px;
+  padding: 22px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.card p,
+.notice p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.viewer {
+  margin-top: 18px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.viewer iframe,
+.viewer object {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 180px);
+  min-height: 680px;
+  border: 0;
+}
+
+.notice {
+  margin-top: 18px;
+  padding: 16px 18px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+@media (max-width: 760px) {
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .viewer iframe,
+  .viewer object {
+    height: 72vh;
+    min-height: 520px;
+  }
+}
